@@ -2,12 +2,12 @@ const webpack = require('webpack')
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const { VueLoaderPlugin } = require('vue-loader')
 
 module.exports = (mode) => {
   const build = mode !== 'development'
   return {
-    // entry: ['react-hot-loader/patch', './src/index.js'],
-    entry: ['./src/index.tsx'],
+    entry: ['./src/main.js'],
     output: {
       filename: 'js/[name].js',
       path: path.join(__dirname, '../dist'), // must be absolute path
@@ -18,7 +18,7 @@ module.exports = (mode) => {
       alias: {
         '@': path.resolve(__dirname, '../src')
       },
-      extensions: ['.ts', '.tsx', '.js', '.json']
+      extensions: ['.js', '.vue', '.json']
     },
     module: {
       rules: [
@@ -26,6 +26,11 @@ module.exports = (mode) => {
           test: /\.(ts|js)x?$/,
           exclude: /node_modules/,
           use: 'babel-loader'
+        },
+        {
+          test: /\.vue$/,
+          exclude: /node_modules/,
+          use: 'vue-loader'
         },
         {
           test: /\.css$|\.scss$/i,
@@ -69,7 +74,8 @@ module.exports = (mode) => {
       // new webpack.NamedModulesPlugin(),
       new HtmlWebpackPlugin({
         template: './index.html'
-      })
+      }),
+      new VueLoaderPlugin()
     ].filter(Boolean)
   }
 }
