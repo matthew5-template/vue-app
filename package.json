@@ -1,0 +1,39 @@
+{
+  "name": "vue-app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Matthew5 <jnwu@thoughtworks.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "webpack-dev-server --config build/webpack.dev.js",
+    "build": "rimraf dist && webpack --config build/webpack.prod.js"
+  },
+  "dependencies": {
+    "ant-design-vue": "^1.6.5",
+    "axios": "^0.20.0",
+    "dayjs": "^1.8.36",
+    "lodash": "^4.17.20",
+    "vue": "^2.6.12",
+    "vue-router": "^3.4.3",
+    "vuex": "^3.5.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.11.6",
+    "@babel/plugin-transform-runtime": "^7.11.5",
+    "@babel/preset-env": "^7.11.5",
+    "babel-loader": "^8.1.0",
+    "css-loader": "^4.3.0",
+    "file-loader": "^6.1.0",
+    "husky": "^4.3.0",
+    "mini-css-extract-plugin": "^0.11.2",
+    "postcss-loader": "^4.0.2",
+    "postcss-preset-env": "^6.7.0",
+    "precss": "^4.0.0",
+    "prettier": "^2.1.2",
+    "rimraf": "^3.0.2",
+    "style-loader": "^1.2.1",
+    "url-loader": "^4.1.0",
+    "webpack": "^4.44.2",
+    "webpack-dev-server": "^3.11.0"
+  }
+}
