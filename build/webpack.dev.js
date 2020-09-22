@@ -7,6 +7,7 @@ module.exports = merge(base('development'), {
   devServer: {
     host: 'localhost',
     port: 3000,
-    hot: true
+    hot: true,
+    publicPath: '/public'
   }
 })

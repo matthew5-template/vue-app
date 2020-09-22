@@ -12,7 +12,7 @@ module.exports = (mode) => {
       filename: 'js/[name].js',
       path: path.join(__dirname, '../dist'), // must be absolute path
       chunkFilename: 'js/[name]_[hash:6].js',
-      publicPath: '/' // filename for html reference: prefix path => js/main.js
+      publicPath: '/public' // filename for html reference: prefix path => js/main.js
     },
     resolve: {
       alias: {
@@ -73,7 +73,10 @@ module.exports = (mode) => {
       // new webpack.HotModuleReplacementPlugin(),
       // new webpack.NamedModulesPlugin(),
       new HtmlWebpackPlugin({
-        template: './index.html'
+        // templateParameters: {
+        //   publicPath: '/public'
+        // },
+        template: './public/index.html'
       }),
       new VueLoaderPlugin()
     ].filter(Boolean)

@@ -9,6 +9,7 @@
 
 <script>
 import { mapState, mapActions, mapMutations } from 'vuex'
+import { getHomepageJson } from '@/apis/homepage'
 export default {
   data() {
     return {
@@ -35,6 +36,7 @@ export default {
     },
     onAllClick() {
       this.increaseAll(1)
+      getHomepageJson()
     }
   }
 }
