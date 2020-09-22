@@ -1,17 +1,24 @@
 <template>
-  <div @click="onClick">{{ title }}</div>
+  <div @click="onClick">{{ title }} {{ count }}</div>
 </template>
 
 <script>
+import { mapState, mapActions } from 'vuex'
 export default {
   data() {
     return {
       title: 'setting'
     }
   },
+  computed: {
+    ...mapState({
+      count: ({ setting }) => setting.count
+    })
+  },
   methods: {
+    ...mapActions('setting', ['increaseSetting']),
     onClick() {
-      this.$router.push('/homepage')
+      this.increaseSetting(1)
     }
   }
 }
