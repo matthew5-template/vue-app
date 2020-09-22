@@ -1,13 +1,13 @@
 export default {
   namespaced: true,
   state: {
-    count: 0
+    count: 0,
   },
   actions: {
     async increaseSetting({ dispatch, commit }, payload) {
       commit('increase', payload)
       console.log('after increaseSetting')
-    }
+    },
   },
   mutations: {
     increase(state, payload) {
@@ -15,6 +15,6 @@ export default {
     },
     decrease(state, payload) {
       state.count -= payload
-    }
-  }
+    },
+  },
 }

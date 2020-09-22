@@ -9,14 +9,14 @@ const routes = [
       {
         path: 'setting',
         name: 'setting',
-        component: () => import('@/pages/Setting')
+        component: () => import('@/pages/Setting'),
       },
       {
         path: 'homepage',
         name: 'homepage',
-        component: () => import('@/pages/Homepage')
-      }
-    ]
+        component: () => import('@/pages/Homepage'),
+      },
+    ],
   },
   //   {
   //     path: '/403',
@@ -36,8 +36,8 @@ const routes = [
   {
     path: '*',
     redirect: '/404',
-    hidden: true
-  }
+    hidden: true,
+  },
 ]
 
 export default routes

@@ -7,5 +7,5 @@ import './use-antd'
 new Vue({
   router,
   store,
-  render: (h) => h(Root)
+  render: (h) => h(Root),
 }).$mount('#app')

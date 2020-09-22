@@ -10,9 +10,9 @@
 export default {
   data() {
     return {
-      title: 'this is root'
+      title: 'this is root',
     }
-  }
+  },
 }
 </script>
 

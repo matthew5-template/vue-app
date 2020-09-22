@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const request = axios.create({
-  baseURL: '/public'
+  baseURL: '/public',
 })
 
 request.interceptors.request.use(

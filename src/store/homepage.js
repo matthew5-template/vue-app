@@ -5,7 +5,7 @@ const delay = (second) => {
 export default {
   namespaced: true,
   state: {
-    count: 0
+    count: 0,
   },
   actions: {
     async increase2Times({ dispatch, commit }, payload) {
@@ -22,7 +22,7 @@ export default {
     async increaseAll({ dispatch, commit }, payload) {
       await dispatch('setting/increaseSetting', payload, { root: true })
       await dispatch('delayAndIncrease', payload)
-    }
+    },
   },
   mutations: {
     increase(state, payload) {
@@ -30,6 +30,6 @@ export default {
     },
     decrease(state, payload) {
       state.count -= payload
-    }
-  }
+    },
+  },
 }

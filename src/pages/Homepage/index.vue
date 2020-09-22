@@ -14,14 +14,14 @@ import { getHomepageJson } from '@/apis/homepage'
 export default {
   data() {
     return {
-      title: 'homepage'
+      title: 'homepage',
     }
   },
   computed: {
     ...mapState({
       homeCount: ({ homepage }) => homepage.count,
-      settingCount: ({ setting }) => setting.count
-    })
+      settingCount: ({ setting }) => setting.count,
+    }),
   },
   methods: {
     ...mapActions('homepage', ['increase2Times', 'increaseAll']),
@@ -38,7 +38,7 @@ export default {
     onAllClick() {
       this.increaseAll(1)
       getHomepageJson()
-    }
-  }
+    },
+  },
 }
 </script>
