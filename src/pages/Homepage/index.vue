@@ -3,7 +3,8 @@
     {{ title }}
     <div @click="onHomeClick">home {{ homeCount }}</div>
     <div @click="onSettingClick">setting {{ settingCount }}</div>
-    <div @click="onAllClick">all</div>
+    <a-button @click="onAllClick">all</a-button>
+    <a-switch />
   </div>
 </template>
 

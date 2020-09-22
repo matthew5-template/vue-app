@@ -1,8 +1,8 @@
 import Vue from 'vue'
-// import './use-antd'
 import Root from './Root'
 import router from './router'
 import store from './store'
+import './use-antd'
 
 new Vue({
   router,
